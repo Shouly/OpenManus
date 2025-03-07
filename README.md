@@ -2,6 +2,10 @@
     <a href="README_zh.md">中文</a>&nbsp ｜ &nbspEnglish&nbsp
 </p>
 
+<p align="left">
+    <a href="https://discord.gg/6dn7Sa3a"><img src="https://dcbadge.vercel.app/api/server/DYn29wFk9z?style=flat" alt="Discord Follow"></a>
+</p>
+
 # OpenManus 🙋
 Manus is incredible, but OpenManus can achieve any ideas without an Invite Code 🛫!
 
@@ -156,7 +160,8 @@ Or contact @mannaandpoem via 📧email: mannaandpoem@gmail.com
 Join our networking group and share your experience with other developers!
 
 <div align="center" style="display: flex; gap: 20px;">
-    <img src="assets/community_group_5.jpg" alt="OpenManus 交流群5" width="300" />
+    <img src="assets/community_group_9.jpg" alt="OpenManus 交流群7" width="300" />
+    <img src="assets/community_group_10.jpg" alt="OpenManus 交流群8" width="300" />
 </div>
 
 ## Acknowledgement
