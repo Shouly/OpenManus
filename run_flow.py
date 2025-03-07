@@ -1,4 +1,9 @@
 import asyncio
+import os
+from dotenv import load_dotenv
+
+# 加载环境变量
+load_dotenv()
 
 from app.agent.manus import Manus
 from app.flow.base import FlowType
