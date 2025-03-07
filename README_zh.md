@@ -48,7 +48,20 @@ OpenManus 需要配置使用的 LLM API，请按以下步骤设置：
 cp config/config.example.toml config/config.toml
 ```
 
-2. 编辑 `config/config.toml` 添加 API 密钥和自定义设置：
+2. 在项目根目录创建 `.env` 文件存储 API 密钥：
+
+```bash
+touch .env
+```
+
+3. 在 `.env` 文件中添加您的 API 密钥：
+
+```
+OPENAI_API_KEY=你的API密钥
+OPENROUTER_API_KEY=你的API密钥
+```
+
+4. 编辑 `config/config.toml` 自定义设置并引用环境变量：
 
 ```toml
 # 全局 LLM 配置

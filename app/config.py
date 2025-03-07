@@ -1,5 +1,7 @@
 import threading
 import tomllib
+import os
+import re
 from pathlib import Path
 from typing import Dict
 
@@ -70,13 +72,27 @@ class Config:
             k: v for k, v in raw_config.get("llm", {}).items() if isinstance(v, dict)
         }
 
+        # 处理环境变量替换
+        api_key = base_llm.get("api_key", "")
+        if isinstance(api_key, str) and api_key.startswith("${") and api_key.endswith("}"):
+            env_var = api_key[2:-1]  # 去掉 ${ 和 }
+            api_key = os.environ.get(env_var, "")
+
         default_settings = {
             "model": base_llm.get("model"),
             "base_url": base_llm.get("base_url"),
-            "api_key": base_llm.get("api_key"),
+            "api_key": api_key,
             "max_tokens": base_llm.get("max_tokens", 4096),
             "temperature": base_llm.get("temperature", 1.0),
         }
+
+        # 处理其他配置中的环境变量
+        for name, override_config in llm_overrides.items():
+            if "api_key" in override_config and isinstance(override_config["api_key"], str):
+                api_key = override_config["api_key"]
+                if api_key.startswith("${") and api_key.endswith("}"):
+                    env_var = api_key[2:-1]
+                    override_config["api_key"] = os.environ.get(env_var, "")
 
         config_dict = {
             "llm": {

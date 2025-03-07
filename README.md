@@ -77,7 +77,20 @@ OpenManus requires configuration for the LLM APIs it uses. Follow these steps to
 cp config/config.example.toml config/config.toml
 ```
 
-2. Edit `config/config.toml` to add your API keys and customize settings:
+2. Create a `.env` file in the project root to store your API keys:
+
+```bash
+touch .env
+```
+
+3. Add your API keys to the `.env` file:
+
+```
+OPENAI_API_KEY=your_api_key_here
+OPENROUTER_API_KEY=your_api_key_here
+```
+
+4. Edit `config/config.toml` to customize settings and reference environment variables:
 
 ```toml
 # Global LLM configuration

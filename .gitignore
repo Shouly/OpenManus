@@ -186,3 +186,4 @@ poetry.lock
 
 # Mac
 .DS_Store
+.env

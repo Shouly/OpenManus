@@ -2,7 +2,7 @@
 [llm]
 model = "anthropic/claude-3.7-sonnet"
 base_url = "https://openrouter.ai/api/v1"
-api_key = "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"
+api_key = "${OPENROUTER_API_KEY}"
 max_tokens = 4096
 temperature = 0.0
 
@@ -10,4 +10,4 @@ temperature = 0.0
 [llm.vision]
 model = "anthropic/claude-3.7-sonnet"
 base_url = "https://openrouter.ai/api/v1"
-api_key = "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"
+api_key = "${OPENROUTER_API_KEY}"
