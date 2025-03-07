@@ -13,6 +13,36 @@ Enjoy your own agent with OpenManus!
 
 ## Installation
 
+### Using Poetry (Recommended)
+
+1. Create a new conda environment:
+
+```bash
+conda create -n open_manus python=3.12
+conda activate open_manus
+```
+
+2. Clone the repository:
+
+```bash
+git clone https://github.com/mannaandpoem/OpenManus.git
+cd OpenManus
+```
+
+3. Install Poetry (if not already installed):
+
+```bash
+curl -sSL https://install.python-poetry.org | python3 -
+```
+
+4. Install dependencies using Poetry:
+
+```bash
+poetry install
+```
+
+### Using pip (Legacy)
+
 1. Create a new conda environment:
 
 ```bash
@@ -62,6 +92,23 @@ api_key = "sk-..."  # Replace with your actual API key
 ```
 
 ## Quick Start
+
+### Using Poetry
+
+Run OpenManus:
+
+```bash
+poetry run openmanus
+```
+
+Or run the flow version:
+
+```bash
+poetry run flow
+```
+
+### Using Python directly
+
 One line for run OpenManus:
 
 ```bash

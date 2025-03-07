@@ -178,3 +178,11 @@ data/
 
 # Workspace
 workspace/
+
+# Poetry
+.venv/
+dist/
+poetry.lock
+
+# Mac
+.DS_Store

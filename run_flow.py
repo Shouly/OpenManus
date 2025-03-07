@@ -5,7 +5,7 @@ from app.flow.base import FlowType
 from app.flow.flow_factory import FlowFactory
 
 
-async def run_flow():
+async def run_flow_async():
     agent = Manus()
 
     while True:
@@ -29,5 +29,10 @@ async def run_flow():
             break
 
 
+def run_flow():
+    """Entry point for the flow application."""
+    asyncio.run(run_flow_async())
+
+
 if __name__ == "__main__":
-    asyncio.run(run_flow())
+    run_flow()

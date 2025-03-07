@@ -4,7 +4,7 @@ from app.agent.manus import Manus
 from app.logger import logger
 
 
-async def main():
+async def main_async():
     agent = Manus()
     while True:
         try:
@@ -19,5 +19,10 @@ async def main():
             break
 
 
+def main():
+    """Entry point for the application."""
+    asyncio.run(main_async())
+
+
 if __name__ == "__main__":
-    asyncio.run(main())
+    main()
